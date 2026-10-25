@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pulseboard · See who walks in (portfolio demo)</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 10 10%22%3E%3Ccircle cx=%225%22 cy=%225%22 r=%224%22 fill=%22%23ff6a1a%22/%3E%3C/svg%3E">
+  <meta name="description" content="Pulseboard is a fictional, privacy-first web analytics product: one calm page of visitors, sources and signups. A portfolio demo by Ian Esquivel." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=Inter:wght@400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">Pulseboard</a>
+    <nav class="topbar-links" aria-label="Main">
+      <a href="#product">Product</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="topbar-actions">
+      <a class="button button--ghost only-wide" href="#">Sign in</a>
+      <a class="button button--white" href="#start">Start for free</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="splash">
+      <div class="splash-art" data-drift><img src="img/doorway.webp" alt="A small figure standing in front of a glowing orange doorway in a dark hall" fetchpriority="high" /></div>
+      <div class="wrap splash-copy">
+        <span class="pill" data-in>Portfolio demo · Pulseboard is fictional</span>
+        <h1 class="display" data-words>See who walks in.</h1>
+        <p class="intro" data-in data-wait="0.3">Web analytics on one calm page: visitors, sources and signups. A 1.8&nbsp;KB script, no cookies, installed in about a minute.</p>
+        <div class="splash-actions" data-in data-wait="0.45">
+          <a class="button button--white" href="#start">Start for free</a>
+          <a class="button button--ghost" href="#product">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticker -->
+    <section class="ticker-wrap">
+      <p class="centered faint" style="font-size:14px" data-in>What ships in the free plan</p>
+      <div class="ticker"><div class="ticker-row">
+        <span>1.8 KB script</span><span>No cookies</span><span>EU hosting</span><span>CSV export</span><span>Share links</span><span>Monday digest</span><span>Goal tracking</span><span>Open API</span>
+      </div></div>
+    </section>
+
+    <!-- Statement -->
+    <section class="statement">
+      <h2 class="display wrap" data-words>Most dashboards answer questions nobody asked.</h2>
+    </section>
+
+    <!-- Product -->
+    <section class="block" id="product" style="padding-top:0">
+      <div class="wrap">
+        <div class="block-head block-head--split">
+          <h2 class="title" data-in>Five numbers. <span>One chart. Done.</span></h2>
+          <p class="intro" data-in>Visitors, pageviews, bounce rate, visit length and signups sit in one row. Click any of them and the chart follows.</p>
+        </div>
+        <figure class="frame" style="margin:0" data-in>
+          <div class="frame-bg"><img src="img/towers.webp" alt="" loading="lazy" /></div>
+          <img class="frame-shot" src="img/pulseboard-app.png" width="2400" height="1440" alt="Pulseboard overview screen: five stats, a 30-day visitors chart, top pages and sources" loading="lazy" />
+          <figcaption class="frame-caption mono"><span>01 / Overview · last 30 days</span><span>Sample data from an imaginary blog</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Privacy features -->
+    <section class="block block--tint" id="privacy">
+      <div class="wrap">
+        <div class="block-head centered">
+          <h2 class="title" style="max-width:16em" data-in>Count people. <span>Never track them.</span></h2>
+          <p class="intro" data-in>Where a visit came from and what it did. Nothing that follows the person home.</p>
+        </div>
+        <div class="tiles" data-in-group>
+          <article class="tile tile--wide tile--art" data-in>
+            <div class="tile-bg"><img src="img/ridges.webp" alt="" loading="lazy" /></div>
+            <div class="tile-text"><span class="label">01 · Sources</span><h3 class="subtitle">Know which link sent them, down to the newsletter issue.</h3></div>
+            <div class="mock mock--frosted" role="img" aria-label="Example top sources this week: Newsletter issue 41, 412 visitors; news.ycombinator.com, 289; google.com, 201; x.com, 96.">
+              <div class="mock-top" aria-hidden="true"><span>Top sources</span><span>This week</span></div>
+              <ul class="meter" aria-hidden="true">
+                <li style="--share:1"><span>Newsletter #41</span><strong>412</strong></li>
+                <li style="--share:.7"><span>news.ycombinator.com</span><strong>289</strong></li>
+                <li style="--share:.49"><span>google.com</span><strong>201</strong></li>
+                <li style="--share:.23"><span>x.com</span><strong>96</strong></li>
+              </ul>
+            </div>
+          </article>
+          <article class="tile" data-in>
+            <div class="mock" role="img" aria-label="Example goal setup: a goal named Signup that counts when the URL is /welcome. 51 this week.">
+              <div aria-hidden="true">
+                <span class="input-label">Goal name</span><span class="input">Signup</span>
+                <span class="input-label">Counts when URL is</span><span class="input">/welcome<i class="cursor"></i></span>
+                <div class="mock-bottom"><span>51 this week</span><span>1.8% of visitors</span></div>
+              </div>
+            </div>
+            <div class="tile-text"><span class="label">02 · Goals</span><h3 class="subtitle">Count signups, not clicks.</h3><p>Name it, paste the URL. Two fields and it starts counting.</p></div>
+          </article>
+          <article class="tile" data-in data-hash-card>
+            <div class="mock" role="img" aria-label="Example: the visitor IP 203.0.113.42 is combined with today's salt and hashed to ec8b0c188d63da08. The IP is then dropped.">
+              <dl class="pairs" aria-hidden="true">
+                <dt>IP</dt><dd class="hash-ip">203.0.113.42</dd>
+                <dt>Salt</dt><dd>2026-10-23 · new at 00:00</dd>
+                <dt>Stored</dt><dd class="hash-out" data-value="ec8b0c188d63da08">ec8b0c188d63da08</dd>
+              </dl>
+              <div class="mock-bottom" aria-hidden="true"><span>Cookies 0</span><span class="hash-note">IP dropped</span></div>
+            </div>
+            <div class="tile-text"><span class="label">03 · Privacy</span><h3 class="subtitle">No cookies. No fingerprints.</h3><p>IP addresses are hashed with a daily salt, then dropped.</p></div>
+          </article>
+          <article class="tile tile--wide tile--wider" data-in>
+            <div class="tile-text"><span class="label">04 · Digest</span><h3 class="subtitle">Last week's numbers in your inbox, Monday at 9:00.</h3><p>Four numbers and one chart. Read it without logging in.</p></div>
+            <div class="mock" role="img" aria-label="Example weekly digest for fieldnotes.blog: 2,914 visitors, up 6%; 51 signups, up 11; top source Newsletter; top page /posts/no-cookies.">
+              <div class="mock-top" aria-hidden="true"><span>fieldnotes.blog · week 42</span><span>Mon 09:00</span></div>
+              <div class="spark" aria-hidden="true"><i style="--v:.52"></i><i style="--v:.64"></i><i style="--v:.58"></i><i class="peak" style="--v:.9"></i><i style="--v:.71"></i><i style="--v:.38"></i><i style="--v:.44"></i></div>
+              <dl class="pairs" aria-hidden="true"><dt>Visitors</dt><dd>2,914 <em>+6%</em></dd><dt>Signups</dt><dd>51 <em>+11</em></dd><dt>Top source</dt><dd>Newsletter</dd><dt>Top page</dt><dd>/posts/no-cookies</dd></dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Numbers -->
+    <section class="block">
+      <div class="wrap">
+        <div class="block-head"><h2 class="title" data-in>Small on purpose.</h2></div>
+        <div class="figures" data-in-group>
+          <div class="figure" data-in><span class="mono faint">01</span><div class="figure-value" data-to="1.8" data-unit=" KB">1.8 KB</div><p>The whole tracking script, gzipped. Your page weight barely moves.</p></div>
+          <div class="figure" data-in><span class="mono faint">02</span><div class="figure-value">0</div><p>Cookies set. Nothing to store on a visitor's device, nothing to ask about.</p></div>
+          <div class="figure" data-in><span class="mono faint">03</span><div class="figure-value" data-to="60" data-unit=" s">60 s</div><p>From pasting one script tag to seeing your first visitor arrive.</p></div>
+          <div class="figure" data-in><span class="mono faint">04</span><div class="figure-value" data-to="24" data-unit=" mo">24 mo</div><p>Of history kept on every plan, exportable as CSV at any time.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="block block--tint" id="pricing">
+      <div class="wrap">
+        <div class="block-head centered">
+          <h2 class="title" data-in>Pay for traffic, not seats.</h2>
+          <p class="intro" data-in>Every plan has every feature. Invite the whole team.</p>
+        </div>
+        <div class="plans" data-in-group>
+          <div class="plan" data-in><span class="label">Free</span><div class="plan-price">$0 <small>/ month</small></div><ul><li>10k pageviews a month</li><li>1 site</li><li>Monday digest</li></ul><a class="button button--ghost" href="#start">Start for free</a></div>
+          <div class="plan plan--pick" data-in><span class="label">Growth</span><div class="plan-price">$9 <small>/ month</small></div><ul><li>100k pageviews a month</li><li>10 sites</li><li>Goals and share links</li></ul><a class="button button--orange" href="#start">Start for free</a></div>
+          <div class="plan" data-in><span class="label">Studio</span><div class="plan-price">$29 <small>/ month</small></div><ul><li>1M pageviews a month</li><li>Unlimited sites</li><li>API and CSV export</li></ul><a class="button button--ghost" href="#start">Start for free</a></div>
+        </div>
+        <p class="centered footnote" data-in>No credit card required. Demo prices for a fictional product.</p>
+      </div>
+    </section>
+
+    <!-- Final call to action -->
+    <section class="splash splash--end" id="start">
+      <div class="splash-art"><img src="img/doorway.webp" alt="" loading="lazy" /></div>
+      <div class="wrap splash-copy">
+        <h2 class="display" style="font-size:clamp(40px,6vw,84px)" data-words>Paste one line. Watch them arrive.</h2>
+        <p class="intro" data-in>Free up to 10,000 pageviews a month. No card, nothing to configure.</p>
+        <div class="splash-actions" data-in><a class="button button--white" href="#">Start for free</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bottom">
+    <div class="wrap bottom-cols">
+      <div><a class="brand" href="#">Pulseboard</a><p class="mono faint" style="margin-top:12px;max-width:26em">A fictional product. Portfolio demo by Ian Esquivel, 2026.</p></div>
+      <div><h4>Product</h4><a href="#product">Overview</a><a href="#privacy">Privacy</a><a href="#pricing">Pricing</a></div>
+      <div><h4>Docs</h4><a href="#">Install</a><a href="#">API</a></div>
+      <div><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+    <div class="giant" aria-hidden="true">pulseboard</div>
+  </footer>
+</body>
+</html>
